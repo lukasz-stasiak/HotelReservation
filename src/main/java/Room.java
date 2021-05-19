@@ -1,9 +1,14 @@
 public class Room {
 
-    int number, beds;
+    private int number;
+    private BedType bedType;
 
-    public Room(int number, int beds) {
+    public Room(int number, BedType bed) {
         this.number = number;
-        this.beds = beds;
+        this.bedType = bed;
+    }
+
+    public String getInfo() {
+        return String.format("Dodano nowy pokoj - numer %d (%s)", this.number, this.bedType);
     }
 }
